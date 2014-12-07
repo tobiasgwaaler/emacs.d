@@ -12,15 +12,12 @@
 (set-default-font "Monaco 14")
 (show-paren-mode)
 (setq mac-option-modifier nil) ;; use ESC as Meta, reserve alt-key for special characters such as [], {}  etc.
-
-;; Sr Speedbar
-(add-to-list 'load-path "~/.emacs.d/manual/")
-(require 'sr-speedbar)
-(global-set-key (kbd "s-o") 'sr-speedbar-toggle)
-(setq sr-speedbar-right-side nil)
+(setq default-directory "~/")
+(setq kill-whole-line t)
 
 ;; Enable auto-saving to the current file
 (setq auto-save-visited-file-name t)
+(setq auto-save-interval 1)
 
 ;; ghc-mod
 (autoload 'ghc-init "ghc" nil t)
@@ -37,6 +34,7 @@
 	    (turn-on-haskell-indent)
 	    (setq company-ghc-show-info t) ;; show type info
 	    (setq ghc-debug t)
+	    (company-ghc-turn-on-autoscan)
 	    )
 	  )
 
@@ -51,4 +49,5 @@
 (global-set-key (kbd "s-<left>") 'beginning-of-line)
 (global-set-key (kbd "s-<up>") (lambda () (interactive) (previous-line 5)))
 (global-set-key (kbd "s-<down>") (lambda () (interactive) (next-line 5)))
+(global-set-key (kbd "s-<backspace>") 'kill-whole-line)
 

@@ -19,8 +19,3 @@
 (package-install 'ido)
 (package-install 'ido-vertical-mode)
 
-(add-to-list 'package-archives 
-	     '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-refresh-contents)
-(package-install 'sr-speedbar)
-
