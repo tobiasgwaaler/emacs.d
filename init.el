@@ -5,8 +5,9 @@
 (load-theme 'wombat)
 (cua-mode t)
 (tool-bar-mode -1) ;; hide toolbar on osx
+(menu-bar-mode -1)
 (ido-vertical-mode 1) ;; list smex-stuff
-(global-linum-mode t)
+;;(global-linum-mode t)
 (setq inhibit-startup-screen +1) ;; no startup-screen
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
 (set-default-font "Monaco 14")
