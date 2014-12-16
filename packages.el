@@ -18,4 +18,4 @@
 (package-install 'exec-path-from-shell)
 (package-install 'ido)
 (package-install 'ido-vertical-mode)
-
+(package-install 'graphviz-dot-mode)
